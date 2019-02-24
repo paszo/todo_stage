@@ -15,8 +15,7 @@ class Tag(models.Model):
         'todo.task.tag',
         'Parent Tag',
         ondelete='restrict')
-    parent_left = fields.Integer('Parent Left', index=True)
-    parent_right = fields.Integer('Parent Right', index=True)
+    parent_path = fields.Char(index=True)
     child_ids = fields.One2many(
         'todo.task.tag',
         'parent_id',
