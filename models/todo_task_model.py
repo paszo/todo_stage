@@ -2,7 +2,7 @@ from odoo import api, fields, models
 from odoo.exceptions import ValidationError
 
 class TodoTask(models.Model):
-    _inherit = 'todo.task'
+    _inherit = ['todo.task']
     effort_estimate = fields.Integer()
     name = fields.Char(help="What needs to be done?")
 
