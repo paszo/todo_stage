@@ -14,6 +14,12 @@ class TodoTask(models.Model):
         [('res.user', 'User'), ('res.partner', 'Partner')],
         'Refers to')
 
+    # Related fields
+    stage = fields.Selection(
+        related='stage_id.state',
+        string='Stage Stage')
+        
+
     # Computed fields
     stage_fold = fields.Boolean(
         'Stage Folded?',
