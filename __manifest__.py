@@ -5,5 +5,8 @@
   'depends': ['todo_app', 'mail'],
   'data': [
     'security/ir.model.access.csv',
+  ],
+  'demo': [
+    'data/todo_task.csv',
   ]
 }
