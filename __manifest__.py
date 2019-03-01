@@ -7,6 +7,6 @@
     'security/ir.model.access.csv',
   ],
   'demo': [
-    'data/todo_task.csv',
+    'data/todo.task.csv',
   ]
 }
