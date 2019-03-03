@@ -1,12 +1,10 @@
 <?xml version="1.0"?>
-<odoo>
-  <data noupdate="1">
+<odoo noupdate="1">
   <!-- Data to load -->
-    <record model="todo.task" id="todo_task_c">
-      <field name="name">Reinstall Odoo 30</field>
-      <field name="user_id" ref="base.user_admin"/>
-      <field name="create_uid" ref="base.user_admin"/>
-      <field name="write_uid" ref="base.user_admin"/>
-    </record>
-  </data>
+  <record model="todo.task" id="todo_task_c">
+    <field name="name">Reinstall Odoo 30</field>
+    <field name="user_id" ref="base.user_admin"/>
+    <field name="create_uid" ref="base.user_admin"/>
+    <field name="write_uid" ref="base.user_admin"/>
+  </record>
 </odoo>
