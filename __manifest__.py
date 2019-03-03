@@ -8,5 +8,6 @@
   ],
   'demo': [
     'data/todo.task.csv',
+    'data/todo_task.xml',
   ]
 }
