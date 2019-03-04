@@ -65,3 +65,18 @@ class TodoTask(models.Model):
                     'message': 'Team was also reset.'
                 }
             }
+
+    @api.model
+    def create(self, vals):
+        # Code before create: should use the 'vals' dict
+        new_record = super().create(vals)
+        # Code after create: can use the 'new record' created
+        return new_record
+
+    @api.multi
+    def write(self, vals):
+        # Code before write: can use 'self', with the old values
+        super().write(vals)
+        # Code after write: can use 'self', with the updated values
+        return True
+        
