@@ -54,3 +54,14 @@ class TodoTask(models.Model):
         for todo in self:
             if len(todo.name) < 5:
                 raise ValidationError('Title must have 5 chars!')
+
+    @api.onchange('user_id')
+    def onchange_user_id(self):
+        if not self.user_id:
+            self.team_ids = None
+            return {
+                'warning': {
+                    'title': 'No Responsible',
+                    'message': 'Team was also reset.'
+                }
+            }
