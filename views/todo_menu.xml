@@ -16,7 +16,12 @@
     domain="[]"
     limit="80" />
 
-    
+  <!-- Modify the view_mode of the To-Do Task Action -->
+  <record id="todo_app.action_todo_task" model="ir.actions.act_window">
+    <field name="view_mode">tree,form,graph,pivot</field>
+  </record>
+
+
 
 
   <!-- Menu items -->
