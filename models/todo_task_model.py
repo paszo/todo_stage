@@ -17,7 +17,7 @@ class TodoTask(models.Model):
         'Refers to')
 
     # Related fields
-    stage = fields.Selection(
+    state = fields.Selection(
         related='stage_id.state',
         string='Stage Stage')
 
@@ -79,4 +79,3 @@ class TodoTask(models.Model):
         super().write(vals)
         # Code after write: can use 'self', with the updated values
         return True
-        

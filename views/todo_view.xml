@@ -10,6 +10,15 @@
     <field name="arch" type="xml">
       <form>
         <header>
+          <field name="state" invisible="True"/>
+          <button name="do_clear_done" type="object"
+            string="Clear Done"
+            attrs="{'invisible':[('state', 'in', ['draft'])]}"
+            class="oe_highlight"/>
+          <field name="stage_id"
+            widget="statusbar"
+            clickable="True"
+            options="{'fold_field': 'fold'}" />
         </header>
         <sheet>
         </sheet>
