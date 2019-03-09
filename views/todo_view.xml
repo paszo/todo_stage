@@ -88,7 +88,7 @@
         <field name="name"/>
         <field name="user_id"/>
         <field name="is_done"/>
-        <field name="state"/>
+        <field name="state" invisible="1"/>
       </tree>
     </field>
   </record>
