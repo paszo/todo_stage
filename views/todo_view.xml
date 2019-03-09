@@ -48,7 +48,8 @@
 
           <group name="group_top">
             <group name="group_left">
-              <field name="date_deadline"/>
+              <field name="date_deadline"
+                attrs="{'invisible':[('state', '=', ['draft'])]}"/>
               <separator string="Reference"/>
               <field name="refers_to"/>
             </group>
