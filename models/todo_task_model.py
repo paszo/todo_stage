@@ -79,3 +79,9 @@ class TodoTask(models.Model):
         super().write(vals)
         # Code after write: can use 'self', with the updated values
         return True
+
+    def _compute_user_todo_count(self):
+        for task in self:
+            task.user_todo_count = task.search_count([('user_id', '=', task.user_id.id)])
+
+    user_todo_count = fields.Integer('User To-Do Count', compute='_compute_user_todo_count')
