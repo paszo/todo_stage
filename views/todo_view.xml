@@ -76,6 +76,23 @@
     </field>
   </record>
 
+  <!-- List View -->
+  <record id="view_tree_todo_task"
+    model="ir.ui.view">
+    <field name="model">todo.task</field>
+    <field name="priority">15</field>
+    <field name="arch" type="xml">
+      <tree decoration-muted="is_done"
+        decoration-bf="state=='open'"
+        delete="false">
+        <field name="name"/>
+        <field name="user_id"/>
+        <field name="is_done"/>
+        <field name="state"/>
+      </tree>
+    </field>
+  </record>
+
 
 
 
