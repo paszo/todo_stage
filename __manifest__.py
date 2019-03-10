@@ -9,6 +9,7 @@
     'views/todo_view.xml',
     'views/todo_kanban_view.xml',
     'views/todo_kanban_assets.xml',
+    'reports/todo_report.xml',
   ],
   'demo': [
     'data/todo.task.csv',
