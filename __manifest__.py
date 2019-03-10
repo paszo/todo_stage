@@ -2,7 +2,7 @@
   'name': 'Add Stages and Tags to To Do-Dos',
   'description': 'Organize To-Do Tasks using Stages and Tags',
   'author': 'Daniel Reis',
-  'depends': ['todo_app', 'mail'],
+  'depends': ['todo_app', 'mail', 'contacts'],
   'data': [
     'security/ir.model.access.csv',
     'views/todo_menu.xml',
