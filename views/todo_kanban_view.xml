@@ -24,8 +24,28 @@
           colors='{"done": "success", "blocked": "danger"}'/>
         <!-- Templates with HTML snippets to use ... -->
         <templates>
+          <!-- Define the kanban-box template -->
           <t t-name="kanban-box">
-            <!-- HTML QWeb template ... -->
+            <!-- Set the Kanban card color: -->
+            <div t-attf-class="oe_kanban_color_#{kanban_getcolor(record.color.raw_value)} oe_kanban_global_click">
+              <div class="o_dropdown_kanban dropdown">
+                <!-- Top-right drop down menu here...-->
+              </div>
+              <div class="oe_kanban_body">
+                <!-- Content elements and fields go here -->
+              </div>
+              <div class="oe_kanban_footer">
+                <div class="oe_kanban_footer_left">
+                  <!-- Left hand footer -->
+                </div>
+                <div class="oe_kanban_footer_right">
+                  <!-- Right hand footer -->
+                </div>
+              </div>
+              <div class="oe_clear"/>
+            </div>
+
+
           </t>
         </templates>
       </kanban>
