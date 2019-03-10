@@ -7,6 +7,7 @@
     'security/ir.model.access.csv',
     'views/todo_menu.xml',
     'views/todo_view.xml',
+    'views/todo_kanban_view.xml',
   ],
   'demo': [
     'data/todo.task.csv',
