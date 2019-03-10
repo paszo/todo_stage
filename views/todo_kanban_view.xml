@@ -29,7 +29,30 @@
             <!-- Set the Kanban card color: -->
             <div t-attf-class="oe_kanban_color_#{kanban_getcolor(record.color.raw_value)} oe_kanban_global_click">
               <div class="o_dropdown_kanban dropdown">
-                <!-- Top-right drop down menu here...-->
+                <!-- Top-right drop down menu here -->
+                <a class="dropdown-toggle btn" role='button' data-toggle="dropdown" href="#">
+                  <span class="fa fa-ellipsis-v" aria-hidden="true"/>
+                </a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                  <!-- Edit and Delete actions, if available: -->
+                  <t t-if="widget.editable">
+                    <li><a type="edit">Edit</a></li>
+                  </t>
+                  <t t-if="widget.deletable">
+                    <li><a type="delete">Delete</a></li>
+                  </t>
+                  <!-- Call a server-side Model method: -->
+                  <t t-if="!record.is_done.value">
+                    <li><a name="do_toggle_done" type="object">Set as Done</a>
+                    </li>
+                  </t>
+                  <!-- Color picker option -->
+                  <li class="divider"/>
+                  <li class="dropdown-header">Color</li>
+                  <li>
+                    <ul class="oe_kanban_colorpicker" data-field="color"/>
+                  </li>
+                </ul>
               </div>
               <div class="oe_kanban_body">
                 <!-- Content elements and fields go here -->
@@ -55,8 +78,7 @@
                 <div class="oe_kanban_footer_right">
                   <!-- Right hand footer -->
                   <field name="kanban_state" widget="kanban_state_selection"/>
-                  <img t-att-src="kanban_image('res.users', 'image_small', record.user_id.raw_value)" t-att-title="record.user_id.value" width="24" height="24" class="oe_kanban_avatar" alt="img"/> 
-
+                  <img t-att-src="kanban_image('res.users', 'image_small', record.user_id.raw_value)" t-att-title="record.user_id.value" width="24" height="24" class="oe_kanban_avatar" alt="img"/>
                 </div>
               </div>
               <div class="oe_clear"/>
