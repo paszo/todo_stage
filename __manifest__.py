@@ -8,6 +8,7 @@
     'views/todo_menu.xml',
     'views/todo_view.xml',
     'views/todo_kanban_view.xml',
+    'views/todo_kanban_assets.xml',
   ],
   'demo': [
     'data/todo.task.csv',
