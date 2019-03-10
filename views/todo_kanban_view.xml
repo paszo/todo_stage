@@ -11,7 +11,11 @@
     <field name="model">todo.task</field>
     <field name="arch" type="xml">
       <kanban>
-        <!-- Empty for now but the Kanvan view will go here -->
+        <field name="stage_id"/>
+        <templates>
+          <t t-name="kanban-box">
+          </t>
+        </templates>
       </kanban>
     </field>
   </record>
