@@ -13,6 +13,16 @@
         <div class="page">
 
           <!-- Report header content -->
+          <div class="row bg-primary">
+            <div class="col-xs-3">
+              <span class="glyphicon glyphicon-pushpin" />
+              What
+            </div>
+            <div class="col-xs-2">Who</div>
+            <div class="col-xs-1">When</div>
+            <div class="col-xs-3">Where</div>
+            <div class="col-xs-3">Watchers</div>
+          </div>
           <t t-foreach="docs" t-as="o">
             <!-- Report row content -->
           </t>
