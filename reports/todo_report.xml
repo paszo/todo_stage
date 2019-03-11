@@ -44,6 +44,18 @@
                 </div>
                 <div class="col-2">
                   <!--Render followers -->
+                  <ul class="media-list">
+                    <t t-foreach="o.message_follower_ids" t-as="f">
+                      <li t-if="f.partner_id.image_small"
+                        class="media-left">
+                        <span t-field="f.partner_id.image_small"
+                          t-options="{'widget':'image'}"
+                          class="media-object"/>
+                        <span class="media-body"
+                          t-field="f.partner_id.name"/>
+                      </li>
+                    </t>
+                  </ul>
                 </div>
               </div>
             </t>
