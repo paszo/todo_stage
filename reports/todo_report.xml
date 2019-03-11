@@ -22,6 +22,9 @@
               <div class="col-2">Watchers</div>
             </div>
 
+            <!-- Running total: initialize variable -->
+            <t t-set="follower_count" t-value="0"/>
+
             <t t-foreach="docs" t-as="o">
               <div class="row">
                 <!-- Report row content -->
@@ -56,6 +59,10 @@
                       </li>
                     </t>
                   </ul>
+                  <!-- Running total: increment and present -->
+                  <t t-set="follower_count" t-value="follower_count + len(o.message_follower_ids)"/>
+                  Accumulated #
+                  <t t-esc="follower_count"/>
                 </div>
               </div>
             </t>
