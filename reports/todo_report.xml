@@ -61,6 +61,16 @@
             </t>
 
             <!-- Report footer content -->
+            <div class="row">
+              <div class="col-2">
+                Count: <t t-esc="len(docs)"/>
+              </div>
+              <div class="col-2"/>
+              <div class="col-2"/>
+              <div class="col-4"/>
+              <div class="col-2"/>
+            </div>
+
           </div>
         </div>
       </t>
