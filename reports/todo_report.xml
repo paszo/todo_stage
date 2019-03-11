@@ -15,28 +15,34 @@
 
             <!-- Report header content -->
             <div class="row bg-primary">
-              <div class="col-3">What</div>
+              <div class="col-2">What</div>
               <div class="col-2">Who</div>
-              <div class="col-1">When</div>
-              <div class="col-3">Where</div>
-              <div class="col-3">Watchers</div>
+              <div class="col-2">When</div>
+              <div class="col-4">Where</div>
+              <div class="col-2">Watchers</div>
             </div>
 
             <t t-foreach="docs" t-as="o">
               <div class="row">
                 <!-- Report row content -->
-                <div class="col-3">
-                  <h4><span t-field="o.name"/></h4>
+                <div class="col-2">
+                  <h6><span t-field="o.name"/></h6>
                 </div>
                 <div class="col-2">
                   <span t-field="o.user_id"/>
                 </div>
-                <div class="col-1">
-                  <span t-field="o.date_deadline"/>
+                <div class="col-2">
+                  <span t-field="o.date_deadline"
+                    t-options="{'widget': 'date'}"/>
                 </div>
-                <div class="col-3">
+                <div class="col-4">
+                  <div t-field="res_company.partner_id"
+                    t-options='{
+                    "widget": "contact",
+                    "fields": ["address", "name", "phone", "fax"],
+                    "no_marker": true}'/>
                 </div>
-                <div class="col-3">
+                <div class="col-2">
                   <!--Render followers -->
                 </div>
               </div>
