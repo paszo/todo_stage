@@ -27,6 +27,7 @@
     paperformat="paperformat_euro_landscape"
     />
 
+
   <template id="report_todo_task_template">
     <t t-call="web.html_container">
       <t t-call="web.external_layout">
@@ -103,4 +104,19 @@
       </t>
     </t>
   </template>
+
+
+  <report id="action_todo_task_report_translated"
+    string="Translated To-do Tasks"
+    model="todo.task"
+    report_type="qweb-pdf"
+    name="todo_stage.report_todo_task_translated"
+    paperformat="paperformat_euro_landscape"
+  />
+
+  <template id="report_todo_task_translated">
+    <t t-call="todo_stage.report_todo_task_template"
+      t-lang="user.lang"/>
+  </template>
+
 </odoo>
