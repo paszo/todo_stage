@@ -36,3 +36,12 @@ class TestWizard(TransactionCase):
         count = len(self.wizard.task_ids)
         self.assertEqual(
             count, 2, 'Expected 2 populated tasks')
+
+    def test_mass_change(self):
+        """Mass change deadline date"""
+        self.wizard.do_populate_tasks()
+        self.wizard.new_deadline = self.todo1.date_deadline
+        self.wizard.do_mass_update()
+        self.assertEqual(
+            self.todo1.date_deadline,
+            self.todo2.date_deadline)
