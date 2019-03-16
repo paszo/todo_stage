@@ -32,4 +32,7 @@ class TestWizard(TransactionCase):
 
     def test_populate_tasks(self):
         """Populate tasks button should add two tasks"""
-        # Add test code
+        self.wizard.do_populate_tasks()
+        count = len(self.wizard.task_ids)
+        self.assertEqual(
+            count, 2, 'Expected 2 populated tasks')
